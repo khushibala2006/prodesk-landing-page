@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height: 1.6;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-btn{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#themeBtn{
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.heading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f7ff;
+    padding: 20px;
+}
+
+.heading-content{
+    max-width: 700px;
+}
+
+.heading h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.heading p{
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn{
+    padding: 12px 25px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.about{
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.services{
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card{
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card i{
+    font-size: 35px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.contact{
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contact p{
+    margin: 15px 0;
+}
+
+footer{
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons{
+    margin-top: 10px;
+}
+
+.social-icons a{
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.dark-theme{
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme .navbar{
+    background-color: #222;
+}
+
+.dark-theme .heading{
+    background-color: #1a1a1a;
+}
+
+.dark-theme .card{
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .nav-links a{
+    color: rgb(3, 3, 3);
+}
+
+@media(max-width:768px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    .nav-links.show{
+        display: flex;
+    }
+
+    .heading h1{
+        font-size: 2rem;
+    }
+
+    .service-container{
+        grid-template-columns: 1fr;
+    }
+}
